@@ -1,0 +1,1 @@
+In this project students have to solve tasks regarding shell variables and expansions and write 2 blog posts
