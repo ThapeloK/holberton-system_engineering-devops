@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Fizz BUZZ
 for i in {1..100}
 do
     st=

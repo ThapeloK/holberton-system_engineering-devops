@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Print TEXT 9 times, if
 TEXT="Holberton School"
 i=1
 while [ $i -le 10 ]

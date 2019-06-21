@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Prints $TEXT 10 times, while loop
 TEXT="Holberton School"
 i="10"
 while [ $i -gt 0 ]

@@ -1,0 +1,58 @@
+root
+The user root is part of the 0 gang, lives in /root and rides /bin/bash. root's place is protected by the passcode x, more info about the user here: root
+daemon
+The user daemon is part of the 1 gang, lives in /usr/sbin and rides /usr/sbin/nologin. daemon's place is protected by the passcode x, more info about the user here: daemon
+bin
+The user bin is part of the 2 gang, lives in /bin and rides /usr/sbin/nologin. bin's place is protected by the passcode x, more info about the user here: bin
+sys
+The user sys is part of the 3 gang, lives in /dev and rides /usr/sbin/nologin. sys's place is protected by the passcode x, more info about the user here: sys
+sync
+The user sync is part of the 65534 gang, lives in /bin and rides /bin/sync. sync's place is protected by the passcode x, more info about the user here: sync
+games
+The user games is part of the 60 gang, lives in /usr/games and rides /usr/sbin/nologin. games's place is protected by the passcode x, more info about the user here: games
+man
+The user man is part of the 12 gang, lives in /var/cache/man and rides /usr/sbin/nologin. man's place is protected by the passcode x, more info about the user here: man
+lp
+The user lp is part of the 7 gang, lives in /var/spool/lpd and rides /usr/sbin/nologin. lp's place is protected by the passcode x, more info about the user here: lp
+mail
+The user mail is part of the 8 gang, lives in /var/mail and rides /usr/sbin/nologin. mail's place is protected by the passcode x, more info about the user here: mail
+news
+The user news is part of the 9 gang, lives in /var/spool/news and rides /usr/sbin/nologin. news's place is protected by the passcode x, more info about the user here: news
+uucp
+The user uucp is part of the 10 gang, lives in /var/spool/uucp and rides /usr/sbin/nologin. uucp's place is protected by the passcode x, more info about the user here: uucp
+proxy
+The user proxy is part of the 13 gang, lives in /bin and rides /usr/sbin/nologin. proxy's place is protected by the passcode x, more info about the user here: proxy
+www-data
+The user www-data is part of the 33 gang, lives in /var/www and rides /usr/sbin/nologin. www-data's place is protected by the passcode x, more info about the user here: www-data
+backup
+The user backup is part of the 34 gang, lives in /var/backups and rides /usr/sbin/nologin. backup's place is protected by the passcode x, more info about the user here: backup
+list
+The user list is part of the 38 gang, lives in /var/list and rides /usr/sbin/nologin. list's place is protected by the passcode x, more info about the user here: Mailing List Manager
+irc
+The user irc is part of the 39 gang, lives in /var/run/ircd and rides /usr/sbin/nologin. irc's place is protected by the passcode x, more info about the user here: ircd
+gnats
+The user gnats is part of the 41 gang, lives in /var/lib/gnats and rides /usr/sbin/nologin. gnats's place is protected by the passcode x, more info about the user here: Gnats Bug-Reporting System (admin)
+nobody
+The user nobody is part of the 65534 gang, lives in /nonexistent and rides /usr/sbin/nologin. nobody's place is protected by the passcode x, more info about the user here: nobody
+libuuid
+The user libuuid is part of the 101 gang, lives in /var/lib/libuuid and rides . libuuid's place is protected by the passcode x, more info about the user here: 
+syslog
+The user syslog is part of the 104 gang, lives in /home/syslog and rides /bin/false. syslog's place is protected by the passcode x, more info about the user here: 
+messagebus
+The user messagebus is part of the 106 gang, lives in /var/run/dbus and rides /bin/false. messagebus's place is protected by the passcode x, more info about the user here: 
+landscape
+The user landscape is part of the 109 gang, lives in /var/lib/landscape and rides /bin/false. landscape's place is protected by the passcode x, more info about the user here: 
+sshd
+The user sshd is part of the 65534 gang, lives in /var/run/sshd and rides /usr/sbin/nologin. sshd's place is protected by the passcode x, more info about the user here: 
+pollinate
+The user pollinate is part of the 1 gang, lives in /var/cache/pollinate and rides /bin/false. pollinate's place is protected by the passcode x, more info about the user here: 
+vagrant
+The user vagrant is part of the 1000 gang, lives in /home/vagrant and rides /usr/bin/zsh. vagrant's place is protected by the passcode x, more info about the user here: 
+colord
+The user colord is part of the 112 gang, lives in /var/lib/colord and rides /bin/false. colord's place is protected by the passcode x, more info about the user here: colord colour management daemon,,,
+statd
+The user statd is part of the 65534 gang, lives in /var/lib/nfs and rides /bin/false. statd's place is protected by the passcode x, more info about the user here: 
+puppet
+The user puppet is part of the 114 gang, lives in /var/lib/puppet and rides /bin/false. puppet's place is protected by the passcode x, more info about the user here: Puppet configuration management daemon,,,
+ubuntu
+The user ubuntu is part of the 1001 gang, lives in /home/ubuntu and rides /bin/bash. ubuntu's place is protected by the passcode x, more info about the user here: Ubuntu

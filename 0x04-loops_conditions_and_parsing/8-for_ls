@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Prints files in directory, without first dash
 for i in *  # the bare * is dangerous
 do
     echo -n "$i" | cut -d"-" -f 2-

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Reads and cuts from /etc/passwd
 file="/etc/passwd"
 while read l
 do
