@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+for i in {1..100}
+do
+    st=
+    ((i % 3 == 0)) && st="Fizz"
+    ((i % 5 == 0)) && st+="Buzz"
+    echo ${st:-$i}
+done
