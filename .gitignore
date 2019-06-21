@@ -47,3 +47,11 @@ flycheck_*.el
 # network security
 /network-security.data
 
+0x02-shell_redirections/.hedde
+0x02-shell_redirections/echo
+0x02-shell_redirections/iacta
+0x02-shell_redirections/list
+0x02-shell_redirections/sort
+0x03-shell_variables_expansions/line-0
+0x03-shell_variables_expansions/line-1
+0x03-shell_variables_expansions/quote
