@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+TEXT="Holberton School"
+i="10"
+while [ $i -gt 0 ]
+do
+    echo "$TEXT"
+    i=$((i-1))
+done
