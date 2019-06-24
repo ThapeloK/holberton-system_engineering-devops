@@ -3,6 +3,12 @@
 file="/var/run/holbertonscript.pid"
 sudo touch $file
 echo "$$" > $file
+handler_quit()
+{
+    sudo rm $file
+    exit 0
+}
+
 handler()
 {
     echo "I hate the kill command"
@@ -10,8 +16,10 @@ handler()
     exit 0
 }
 
+
 trap "echo 'Y U no love me?!'" SIGINT
 trap handler SIGTERM
+trap handler_quit SIGQUIT
 while :
 do
     echo "To infinity and beyond"
