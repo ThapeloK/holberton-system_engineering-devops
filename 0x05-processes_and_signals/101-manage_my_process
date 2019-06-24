@@ -15,7 +15,7 @@ then
     echo "manage_my_process stopped"
 elif [[ $1 == "restart" ]]
 then
-    kill "$(cat "$file")"
+    kill "$(cat "$tmp")"
     rm "$tmp"
     touch "$tmp"
     bash ./"$file" &
