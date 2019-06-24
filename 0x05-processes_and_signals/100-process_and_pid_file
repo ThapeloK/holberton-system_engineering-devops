@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Creates a file with a PID
+file="/var/run/holbertonscript.pid"
+sudo touch $file
+echo "$$" > $file
+handler()
+{
+    echo "I hate the kill command"
+    sudo rm $file
+    exit 0
+}
+
+trap "echo 'Y U no love me?!'" SIGINT
+trap handler SIGTERM
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
