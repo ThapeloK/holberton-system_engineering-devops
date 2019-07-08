@@ -31,7 +31,7 @@ Requirements:
 * The regular expression must be exactly matching a string that starts with h ends with n and can have any single character in between
 * Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 
-Example
+Example:
 ```
 sylvain@ubuntu$ ./5-beginning_and_end.rb 'hn' | cat -e
 $
@@ -45,11 +45,12 @@ sylvain@ubuntu$
 $
 ```
 ### [6. Call me maybe](./6-phone_number.rb)
-* This task is brought to you by Holberton mentor Neha Jain, Senior Software Engineer at LinkedIn.
+This task is brought to you by Holberton mentor Neha Jain, Senior Software Engineer at LinkedIn.
 
 Requirement:
 
-The regular expression must match a 10 digit phone number
+* The regular expression must match a 10 digit phone number
+
 Example:
 ```
 sylvain@ubuntu$ ./6-phone_number.rb 4155049898 | cat -e
@@ -64,9 +65,10 @@ sylvain@ubuntu$
 ```
 
 ### [7. OMG WHY ARE YOU SHOUTING?](./7-OMG_WHY_ARE_YOU_SHOUTING.rb)
-* Requirement:
+Requirement:
 
-The regular expression must be only matching: capital letters
+* The regular expression must be only matching: capital letters
+
 Example:
 
 ```
@@ -80,23 +82,24 @@ sylvain@ubuntu$
 ```
 
 ### [8. Textme](./100-textme.rb)
-* This exercise was prepared for you by Guillaume Plessis, VP of Infrastructure at TextMe. It is something he uses daily. You can thank Guillaume for his project on Twitter.
+This exercise was prepared for you by Guillaume Plessis, VP of Infrastructure at TextMe. It is something he uses daily. You can thank Guillaume for his project on Twitter.
 
 For this task, you’ll be taking over Guillaume’s responsibilities: one afternoon, a TextMe VoIP Engineer comes to you and explains she wants to run some statistics on the TextMe app text messages transactions.
 
-* Requirements:
+Requirements:
 
-Your script should output: `[SENDER]`,`[RECEIVER]`,`[FLAGS]`
-The sender phone number or name (including country code if present)
-The receiver phone number or name (including country code if present)
-The flags that were used
-You can find a log file here.
+* Your script should output: `[SENDER]`,`[RECEIVER]`,`[FLAGS]`
+* The sender phone number or name (including country code if present)
+* The receiver phone number or name (including country code if present)
+* The flags that were used
+* You can find a log file here.
 
 Example:
 
 
 ### [9. Pass LinkedIn technical interview level0](./101-passed_linkedin_regex_challenge.jpg)
 * One way to get started in getting a Software Engineering job at LinkedIn is to solve their regex puzzle.
+
 ![LinkedIn puzzle](./101-passed_linkedin_regex_challenge.jpg)
 ---
 
