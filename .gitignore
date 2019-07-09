@@ -55,3 +55,10 @@ flycheck_*.el
 0x03-shell_variables_expansions/line-0
 0x03-shell_variables_expansions/line-1
 0x03-shell_variables_expansions/quote
+0x04-loops_conditions_and_parsing/a.txt
+0x04-loops_conditions_and_parsing/dash-file-dash
+0x05-processes_and_signals/103-screencast_unix_signal
+0x05-processes_and_signals/a.out
+0x05-processes_and_signals/dd.sh
+0x06-regular_expressions/file.txt
+0x06-regular_expressions/text_messages.log
