@@ -1,11 +1,12 @@
 # Puppet script to create ssh config file
-file { '/home/vagrant/.ssh/config':
-  mode    => '0600',
-  content =>
-  'Hostname 34.74.176.216
-  HostName 34.74.176.216
-  User ubuntu
-  IdentityFile ~/.ssh/holberton
-  PasswordAuthentication no
-  ',
+file_line { 'Turn off passwd auth':
+  ensure => 'present',
+  path   => '/etc/ssh/ssh_config',
+  line   => '    PasswordAuthentication no',
+}
+
+file_line { 'Declare identity file':
+  ensure => 'present',
+  path   => '/etc/ssh/ssh_config',
+  line   => '    IdentityFile ~/.ssh/holberton',
 }
