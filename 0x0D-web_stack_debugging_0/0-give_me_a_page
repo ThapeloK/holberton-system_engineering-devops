@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # Fixes docker issue
-docker exec -it 47ca3994a491 service apache2 start
+sudo docker run -p 8080:80 -d -it holbertonschool/265-0
+id=$(sudo docker ps -fq image=holbertonschool/265-0:latest)
+sudo docker exec -it "$id" service apache2 start
