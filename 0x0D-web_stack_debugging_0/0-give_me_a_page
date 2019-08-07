@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # Fixes docker issue
-id=$(docker ps -fq image=holbertonschool/265-0:latest)
-docker exec -it "$id" service apache2 start
+docker exec -it 47ca3994a491 service apache2 start
