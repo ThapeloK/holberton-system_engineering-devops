@@ -3,11 +3,11 @@ package { 'nginx':
   ensure => installed,
 }
 
-service { 'nginx_stop':
-  ensure  => stopped,
-  enable  => true,
-  require => Package['nginx'],
-}
+# service { 'nginx_stop':
+#   ensure  => stopped,
+#   enable  => true,
+#   require => Package['nginx'],
+# }
 
 file_line { 'Add redirection, 301':
   ensure   => 'present',
