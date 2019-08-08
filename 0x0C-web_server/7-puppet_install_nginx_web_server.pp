@@ -4,10 +4,9 @@ package { 'nginx':
 }
 
 file_line { '/etc/nginx/sites-available/default':
-  ensure   => 'present',
-  after    => 'listen 80 default_server;',
-  multiple => true,
-  line     => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
+  ensure => 'present',
+  after  => 'listen 80 default_server;',
+  line   => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
 }
 
 file { '/var/www/html/index.html':
@@ -16,6 +15,7 @@ file { '/var/www/html/index.html':
 
 service { 'nginx':
   ensure  => running,
+  enable  => true,
   require => Package['nginx'],
 }
 
