@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Using what you did for task #0, make your fix short and sweet.
+apt-get install -y apache2
+cp /usr/share/nginx/html/index.html /var/www/html/
+service apache2 start
