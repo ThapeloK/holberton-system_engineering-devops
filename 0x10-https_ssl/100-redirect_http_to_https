@@ -48,7 +48,8 @@ frontend load_balancer
       	#bind 35.243.220.29:80
         reqadd X-Forwarded-Proto:\ http
         mode http
-	redirect scheme https code 301 if !{ ssl_fc }
+	# redirect scheme https code 301 if !{ ssl_fc }
+	http-request redirect code 301 location https://www.farrukh.tech
         default_backend web_servers
 
 frontend www-https
