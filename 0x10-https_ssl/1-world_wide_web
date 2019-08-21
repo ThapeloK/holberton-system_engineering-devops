@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Script which shows information about domain
+
+print_all ()
+{
+    options=(+nocmd +nocomments +nostats +noquestion)
+    dig "${options[@]}" "$2.$1" | awk -v var="$2" '{print "The subdomain " var " is a " $4 " record and points to", $5}'
+}
+
+if [ -z "$2" ]
+then
+    print_all "$1" "www"
+    print_all "$1" "lb-01"
+    print_all "$1" "web-01"
+    print_all "$1" "web-02"
+else
+    print_all "$1" "$2"
+fi
