@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # user is a superuser that can do anything on a Unix machine
 pkill apache2
-chmod o+rw /etc/nginx/nginx.conf /etc/nginx/sites-available/default
-sed -i "s/listen 80 default_server;/listen 8080 default_server;/" /etc/nginx/sites-available/default
-sed -i "s/listen \[::\]:80 default_server ipv6only=on;/listen [::]:8080 default_server ipv6only=on;/" /etc/nginx/sites-available/default
+chmod o+rw /etc/nginx/nginx.conf
+sed -i "s/listen 80 default_server/listen 8080 default_server/" /etc/nginx/sites-available/default
+sed -i "s/listen \[::\]:80 default_server ipv6only=on/listen [::]:8080 default_server ipv6only=on/" /etc/nginx/sites-available/default
 sudo -u nginx service nginx start
