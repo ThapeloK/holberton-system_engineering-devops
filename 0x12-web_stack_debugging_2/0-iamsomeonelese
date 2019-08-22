@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Change the user
-useradd "$1"
+#useradd "$1"
 sudo -u "$1" bash -c 'whoami'
