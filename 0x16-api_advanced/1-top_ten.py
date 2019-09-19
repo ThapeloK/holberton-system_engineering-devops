@@ -14,5 +14,5 @@ def top_ten(subreddit):
         print(None)
         return
     l = d.get('data').get('children')
-    for dic in l:
+    for dic in l[:10]:
         print(dic.get('data').get('title'))
