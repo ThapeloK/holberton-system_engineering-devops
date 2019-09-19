@@ -45,6 +45,5 @@ def count_words(subreddit, word_list):
     if d:
         for key, value in sorted(d.items(), key=lambda x: (-x[1], x[0])):
             print("{}: {}".format(key, value))
-#        # import pprint
-#       # pp = pprint.PrettyPrinter(indent=4)
-#       # pp.pprint(d)
+    else:
+        print()
