@@ -6,7 +6,7 @@ import requests
 
 def contains(word, title):
     """Checks if words is in title"""
-    pat = r"(?i)\s{}\s".format(word)
+    pat = r"(?i)\b{}\b".format(word)
     if re.search(pat, title):
         return True
     return False
@@ -25,24 +25,25 @@ def recurse(subreddit, word_list, after=1, dic={}):
         return dic
     l = d.get('data').get('children')
     for i in l:
-        title = i.get('data').get('title').lower()
+        title = i.get('data').get('title').lower().split()
         for j in word_list:
-            if contains(j, title):
-                if j not in dic:
-                    dic[j] = 1
-#                   #dic[j] = [title]
-                else:
-                    dic[j] += 1
-#                   #dic[j].append(title)
+            for t in title:
+                if j == t:
+                    if j not in dic:
+                        dic[j] = 1
+                    else:
+                        dic[j] += 1
     p = d.get('data').get('after')
     return recurse(subreddit, word_list, p, dic)
 
 
 def count_words(subreddit, word_list):
     """Cound # of keywords"""
+    for i, e in enumerate(word_list):
+        word_list[i] = e.lower()
     d = recurse(subreddit, word_list)
     if d:
-        for key, value in sorted(d.items(), key=lambda x: x[1], reverse=True):
+        for key, value in sorted(d.items(), key=lambda x: (-x[1], x[0])):
             print("{}: {}".format(key, value))
 #        # import pprint
 #       # pp = pprint.PrettyPrinter(indent=4)
