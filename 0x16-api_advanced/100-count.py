@@ -1,6 +1,15 @@
 #!/usr/bin/python3
 """Get request to reddit API"""
+import re
 import requests
+
+
+def contains(word, title):
+    """Checks if words is in title"""
+    pat = r"(?i)\b{}\b".format(word)
+    if re.search(pat, title):
+        return True
+    return False
 
 
 def recurse(subreddit, word_list, after=1, dic={}):
@@ -18,7 +27,7 @@ def recurse(subreddit, word_list, after=1, dic={}):
     for i in l:
         title = i.get('data').get('title').lower()
         for j in word_list:
-            if j in title:
+            if contains(j, title):
                 if j not in dic:
                     dic[j] = 1
                 else:
@@ -29,8 +38,6 @@ def recurse(subreddit, word_list, after=1, dic={}):
 
 def count_words(subreddit, word_list):
     """Cound # of keywords"""
-    for i, e in enumerate(word_list):
-        word_list[i] = e.lower()
     d = recurse(subreddit, word_list)
     if d:
         for key, value in sorted(d.items(), key=lambda x: x[1], reverse=True):
