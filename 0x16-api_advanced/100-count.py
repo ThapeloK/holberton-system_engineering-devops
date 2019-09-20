@@ -23,9 +23,9 @@ def recurse(subreddit, word_list, after=1, dic={}):
     d = r.json()
     if after is None:
         return dic
-    l = d.get('data').get('children')
+    l = d.get('data', {}).get('children')
     for i in l:
-        title = i.get('data').get('title').lower().split()
+        title = i.get('data', {}).get('title').lower().split()
         for j in word_list:
             for t in title:
                 if j == t:
@@ -33,7 +33,7 @@ def recurse(subreddit, word_list, after=1, dic={}):
                         dic[j] = 1
                     else:
                         dic[j] += 1
-    p = d.get('data').get('after')
+    p = d.get('data', {}).get('after')
     return recurse(subreddit, word_list, p, dic)
 
 
