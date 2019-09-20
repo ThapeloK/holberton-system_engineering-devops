@@ -1,24 +1,15 @@
 #!/usr/bin/python3
 """Get request to reddit API"""
-import re
 import requests
 
 
-def contains(word, title):
-    """Checks if words is in title"""
-    pat = r"(?i)\b{}\b".format(word)
-    if re.search(pat, title):
-        return True
-    return False
-
-
-def recurse(subreddit, word_list, after=1, dic={}):
+def recurse(subreddit, word_list, after="", dic={}):
     """Recursive function"""
     base_url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     h = {'User-Agent': 'Reddit API test'}
     params = {'limit': 200, 'after': after}
     r = requests.get(base_url, headers=h, allow_redirects=False, params=params)
-    if r.status_code > 299:
+    if r.status_code != 200:
         return None
     d = r.json()
     if after is None:
